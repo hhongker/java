@@ -1,0 +1,11 @@
+people:
+  id: 1
+  name: 小明
+  birthday: 1998-9-8
+  createTime: 1998-9-8 12:10:9
+
+vegetables:
+  id: 2
+  name: 胡萝卜
+  birthday: 1998-5-8
+  createTime: 1970-9-8 9:11:6

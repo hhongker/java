@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.mybatis.example.BlogMapper">
+    <select id="insertPerson">
+        insert into person (name,age) values(#{name},#{age});
+    </select>
+
+    <delete id="deletePerson">
+        delete from person where id = #{id}
+    </delete>
+
+    <update id="updatePerson">
+        update person set  name = #{name}, age = #{age} where id = #{id}
+    </update>
+
+    <select id="selectOnePerson" resultType="domain.Person">
+        select id, name, age from person where id = #{id}
+    </select>
+
+    <select id="selectListPerson" resultType="domain.Person">
+        select id, name, age from person order by id ${flag}
+    </select>
+
+
+
+
+<!--====================================================================-->
+
+    <!--一对一查询,查询两次-->
+    <resultMap id="selectOneStu" type="domain.Student">
+        <id property="stId" column="stid"></id>
+        <!--<result property="stName" column="stname"></result>-->
+        <!--<result property="stAge" column="stage"></result>-->
+        <association property="schoolCard" column="stid" javaType="domain.SchoolCard" select="sC" ></association>
+    </resultMap>
+    <select id="sC" resultType="domain.SchoolCard">
+        select * from schoolcard where scid = #{id}
+    </select>
+    <!--单条-->
+    <select id="selectOneStu" resultMap="selectOneStu">
+        select stid, stname, stage from student where stid = #{id};
+    </select>
+    <!--全部-->
+    <select id="selectAllStu" resultMap="selectOneStu">
+        select stid, stname, stage from student;
+    </select>
+
+
+
+    <!--一对一查询,联合查询-->
+    <resultMap id="selectStudent" type="domain.Student">
+        <id property="stId" column="stid"></id>
+        <result property="stName" column="stname"></result>
+        <result property="stAge" column="stage"></result>
+        <association property="schoolCard" javaType="domain.SchoolCard" >
+            <id property="scId" column="scid"></id>
+            <result property="scMoney" column="scmoney"></result>
+        </association>
+    </resultMap>
+
+    <!--单条-->
+    <select id="selectOneS" resultMap="selectStudent">
+        select * from student inner join schoolcard on student.stid = schoolcard.scid and student.stid = #{id}
+    </select>
+
+    <!--全部-->
+    <select id="selectAllS" resultMap="selectStudent">
+        select * from student inner join schoolcard on student.stid = schoolcard.scid
+    </select>
+
+    <!--====================================================================-->
+
+    <!--一对多关系，查询两次-->
+    <resultMap id="selectOneClass" type="domain.Clas">
+        <id property="cid" column="cid"></id>
+        <result property="cname" column="cname"></result>
+        <collection property="listStu" column="cid" javaType="list" ofType="domain.Stu" select="selectOS" >
+        </collection>
+    </resultMap>
+    <select id="selectOS" resultType="domain.Stu">
+        select * from Stu where cid = #{cid};
+    </select>
+
+    <!--单条-->
+    <select id="selectOneClas" resultMap="selectOneClass">
+          select * from clas where cid = #{cid}
+    </select>
+    <!--多条-->
+    <select id="selectAllClas" resultMap="selectOneClass">
+          select * from clas
+    </select>
+
+
+
+    <!--一对多关系，联合查询-->
+    <resultMap id="selectOneC" type="domain.Clas">
+        <id property="cid" column="cid"></id>
+        <result property="cname" column="cname"></result>
+        <collection property="listStu" javaType="list" ofType="domain.Stu">
+            <id property="sid" column="sid"></id>
+            <result property="sname" column="sname"></result>
+            <result property="cid" column="cid"></result>
+        </collection>
+    </resultMap>
+    <!--单条查询-->
+    <select id="selectOneC" resultMap="selectOneC">
+        select * from clas inner join  stu on clas.cid= stu.cid  where clas.cid = #{id}
+    </select>
+
+    <!--多条查询-->
+    <select id="selectAllC" resultMap="selectOneC">
+        select * from clas inner join  stu on clas.cid= stu.cid
+    </select>
+
+
+</mapper>
+

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.mybatis.example.BlogMapper">
+
+    <!--<resultMap id="selectStudent" type="domain.Student">-->
+        <!--<id property="sid" column="idstu"></id>-->
+        <!--<result property="sname" column="namestu"></result>-->
+        <!--<collection property="teachers" javaType="list" ofType="domain.Teacher">-->
+            <!--<id property="tid" column="idtea"></id>-->
+            <!--<result property="tname" column="nametea"></result>-->
+        <!--</collection>-->
+    <!--</resultMap>-->
+
+    <!--<select id="selectStudentOne" resultMap="selectStudent">-->
+        <!--select * from stu inner join  tea_stu on stu.idstu = tea_stu.idstu inner join tea on tea.idtea = tea_stu.idtea and stu.idstu = #{id}-->
+    <!--</select>-->
+
+    <!--<select id="selectStudentAll" resultMap="selectStudent">-->
+        <!--select * from stu inner join  tea_stu on stu.idstu = tea_stu.idstu inner join tea on tea.idtea = tea_stu.idtea-->
+    <!--</select>-->
+
+
+
+    <!--<resultMap id="selectTeacher" type="domain.Teacher">-->
+        <!--<id property="tid" column="idtea"></id>-->
+        <!--<result property="tname" column="nametea"></result>-->
+        <!--<collection property="students" javaType="list" ofType="domain.Student">-->
+            <!--<id property="sid" column="idstu"></id>-->
+            <!--<result property="sname" column="namestu"></result>-->
+        <!--</collection>-->
+    <!--</resultMap>-->
+
+    <!--<select id="selectTeacherOne" resultMap="selectTeacher">-->
+           <!--select * from tea inner join  tea_stu on tea.idtea = tea_stu.idtea inner join stu on tea_stu.idstu = stu.idstu and tea.idtea = #{id}-->
+    <!--</select>-->
+
+    <!--<select id="selectTeacherAll" resultMap="selectTeacher">-->
+           <!--select * from tea inner join  tea_stu on tea.idtea = tea_stu.idtea inner join stu on tea_stu.idstu = stu.idstu-->
+    <!--</select>-->
+
+
+    <resultMap id="selectTeacher" type="domain.Teacher">
+        <id property="tid" column="idtea"></id>
+        <result property="tname" column="nametea"></result>
+        <collection property="students" column="idtea" javaType="list" ofType="domain.Student" select="selectStu" >
+        </collection>
+    </resultMap>
+    <select id="selectStu" resultMap="selectStu">
+        select * from stu inner  join  tea_stu on stu.idstu = tea_stu.idstu and tea_stu.idtea = #{idtea};
+    </select>
+    <resultMap id="selectStu" type="domain.Student">
+        <id property="sid" column="idstu"></id>
+        <result property="sname" column="namestu"></result>
+    </resultMap>
+
+
+
+    <select id="selectTeacherOne" resultMap="selectTeacher">
+          select * from tea where idtea = #{idtea}
+    </select>
+
+    <select id="selectTeacherAll" resultMap="selectTeacher">
+          select * from tea
+    </select>
+
+
+
+
+
+
+    <resultMap id="selectStudent" type="domain.Student">
+        <id property="sid" column="idstu"></id>
+        <result property="sname" column="namestu"></result>
+        <collection property="teachers" column="idstu" javaType="list" ofType="domain.Teacher" select="selectTea" >
+        </collection>
+
+    </resultMap>
+    <select id="selectTea" resultMap="selectTea">
+        select * from tea inner join tea_stu on tea.idtea = tea_stu.idtea and tea_stu.idstu = #{idstu};
+    </select>
+    <resultMap id="selectTea" type="domain.Teacher">
+        <id property="tid" column="idtea"></id>
+        <result property="tname" column="nametea"></result>
+    </resultMap>
+
+
+
+    <select id="selectStudentOne" resultMap="selectStudent">
+          select * from stu where idstu = #{idstu}
+    </select>
+
+    <select id="selectStudentAll" resultMap="selectStudent">
+          select * from stu
+    </select>
+
+</mapper>
+

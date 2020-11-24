@@ -1,0 +1,59 @@
+青萍之末
+    —— 风起于青萍之末 
+       “细节处明确  原理处加深”
+
+《不可变的String》
+1) 创建了几个对象？
+   String str = "edward";
+答案：1个,"edward",在常量池中。
+原因：
+-1- 堆：存放所有new出来的对象
+-2- 栈：基本数据变量和 对对象的引用
+-3- 常量池： 基本类型常量和字符串常量
+对象只会存储于堆或者常量池中
+
+"edward"拿到常量池中去找，如果不存在就创建。
+
+2) 创建了几个对象？
+   String str = "edward";
+   str = "atuo";
+答案：2个，"edward"，"atuo",在常量池中。
+原因：此时edward不变。 
+
+3) 创建了几个对象？
+   String str = new String("edward");
+答案： 2个，"edward",在常量池和堆内存中同时存在
+
+4) 创建了几个对象？
+   String str = "";
+答案： 0个
+原因：jvm启动时，会默认生成空串，此时只是引用地址。
+
+5) 创建了几个对象？
+  String str = "ed" + "ward";
+答案： 1个
+原因：等价于String str = "edward";
+     常量和常量的相加，在语法直接处理
+工具：javap -c 命令 (反编译工具)
+
+6) 创建了几个对象？
+  String str = "edward";
+  String str1 = str + "美不美";
+答案： 4个，"edward"、"美不美"、"edward美不美"在常量区中，还有一个stringbuilder对象在堆内存中。
+原因： 在变量与常量相加时，使用了stringbuilder的append方法。
+
+7) 创建了几个对象？ 
+  String str = "edward";
+  String str1 = "你说啥"+","+str+"美不美？"+"呸";
+答案：5个，"edward"、"你说啥,"、"美不美？呸"、"你说啥,edward美不美？呸" 四个在常量池中的对象，一个stringbuilder对象在堆内存中。
+
+原因：常量直接组合，变量就使用stringbuilder。
+
+
+
+
+
+
+
+
+

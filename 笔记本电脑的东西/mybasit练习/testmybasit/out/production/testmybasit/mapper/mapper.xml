@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.mybatis.example.BlogMapper">
+
+
+    <select id="selecClassOne" resultType="domain.Class">
+        select  * from class where cid = #{cid}
+    </select>
+
+
+    <resultMap id="selectClassOne" type="domain.Class">
+        <id property="cid" column="cid"></id>
+        <result property="cname" column="cname"></result>
+        <result property="gid" column="gid"></result>
+        <association property="headTeacher" javaType="domain.HeadTeacher">
+            <id property="hid" column="hid"></id>
+            <result property="hname" column="hname"></result>
+            <result property="hsex" column="hsex"></result>
+        </association>
+    </resultMap>
+    <select id="selectClassOne" resultMap="selectClassOne">
+        select * from class inner  join  headteacher on class.cid = headteacher.cid and class.cid = #{cid};
+    </select>
+
+
+    <resultMap id="selectClassOneForStudent" type="domain.Class">
+        <id property="cid" column="cid"></id>
+        <result property="cname" column="cname"></result>
+        <result property="gid" column="gid"></result>
+        <association property="headTeacher" javaType="domain.HeadTeacher">
+            <id property="hid" column="hid"></id>
+            <result property="hname" column="hname"></result>
+            <result property="hsex" column="hsex"></result>
+        </association>
+        <collection property="students" javaType="list" ofType="domain.Student">
+            <id property="sid" column="sid"></id>
+            <result property="sname" column="sname"></result>
+            <result property="ssex" column="ssex"></result>
+        </collection>
+    </resultMap>
+    <select id="selectClassOneForStudent" resultMap="selectClassOneForStudent">
+        select * from class inner join student on class.cid = student.cid
+         inner  join  headteacher on class.cid = headteacher.cid
+         and class.cid = #{cid}
+    </select>
+
+
+    <resultMap id="selectCourseOne" type="domain.Course">
+        <id property="coid" column="coid"></id>
+        <result property="coname" column="coname"></result>
+        <collection property="list" javaType="list" ofType="domain.Student">
+            <id property="sid" column="sid"></id>
+            <result property="sname" column="sname"></result>
+            <result property="ssex" column="ssex"></result>
+            <association property="class_" javaType="domain.Class">
+                <id property="cid" column="cid"></id>
+                <result property="cname" column="cname"></result>
+                <result property="gid" column="gid"></result>
+                <association property="headTeacher" javaType="domain.HeadTeacher">
+                    <id property="hid" column="hid"></id>
+                    <result property="hname" column="hname"></result>
+                    <result property="hsex" column="hsex"></result>
+                </association>
+            </association>
+        </collection>
+    </resultMap>
+    <select id="selectCourseOne" resultMap="selectCourseOne">
+        select * from course as co inner join course_student as cs on co.coid = cs.coid
+        inner join student as s on cs.sid = s.sid inner join class as c on s.cid = c.cid
+        inner  join headteacher as h on h.cid = c.cid
+        and co.coid = #{coid}
+    </select>
+
+
+</mapper>

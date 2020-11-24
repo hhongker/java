@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>name</th>
+        <th>birthday</th>
+        <th>createTime</th>
+    </tr>
+    <tr th:each="item:${list}">
+        <td th:text="${item.id}"></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.birthday}"></td>
+        <td th:text="${item.createTime}"></td>
+    </tr>
+</table>
+<div id="main"></div>
+
+<script th:inline="javascript">
+    setInterval(function () {
+        var date = new Date()
+        main.innerText = /*[[${#dates.format(date,"yyyy-MM-dd HH:mm:ss")}]]*/ date
+    },1000)
+</script>
+</body>
+</html>

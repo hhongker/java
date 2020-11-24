@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="testMybasitConfig:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="89cc19af-a48a-40da-a1a5-2f77d0849307" name="默认" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1cOM8buKhdkNywKh7D8dJMHz9Mq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573708125247" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib/lombok-1.18.8.jar!/" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\hhr\java_test\testMybasitConfig\web\WEB-INF" />
+      <recent name="E:\hhr\java_test\testMybasitConfig" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\root\desktop\mybasit练习\mybasit 一对多\src\lib" />
+      <recent name="E:\hhr\java_test\testMybasitConfig" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="testMybasitConfig" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.26" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.26" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="testMybasitConfig:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_26_testMybasitConfig" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="testMybasitConfig:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="89cc19af-a48a-40da-a1a5-2f77d0849307" name="默认" comment="" />
+      <created>1573707840516</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573707840516</updated>
+      <workItem from="1573707845016" duration="301000" />
+      <workItem from="1590395030897" duration="1111000" />
+      <workItem from="1593656598787" duration="3751000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="390" y="61" key="#com.intellij.ide.util.MemberChooser" timestamp="1593661202603">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="390" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1593661202603" />
+    <state x="488" y="250" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1590395111343">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="488" y="250" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.720@0.0.1280.720" timestamp="1590395111343" />
+    <state x="421" y="116" key="FileChooserDialogImpl" timestamp="1593659962724">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="421" y="116" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1593659962724" />
+    <state width="1222" height="130" key="GridCell.Tab.0.bottom" timestamp="1593662039995">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1222" height="130" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1593662039995" />
+    <state width="1222" height="130" key="GridCell.Tab.0.center" timestamp="1593662039995">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1222" height="130" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1593662039995" />
+    <state width="1222" height="130" key="GridCell.Tab.0.left" timestamp="1593662039995">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1222" height="130" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1593662039995" />
+    <state width="1222" height="130" key="GridCell.Tab.0.right" timestamp="1593662039995">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1222" height="130" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1593662039995" />
+    <state x="115" y="0" key="SettingsEditor" timestamp="1593659966665">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="115" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1593659966665" />
+    <state x="297" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1593660038462">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="297" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1593660038462" />
+  </component>
+</project>
