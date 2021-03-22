@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ed48cf2-9e9f-41b4-9be3-49330960e931" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1pEZvQMfDYPsD5hCATyzHr62f1A" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data3.Main" />
+      <module name="java的线程2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data4.Main" />
+      <module name="java的线程2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data1.Main" />
+      <module name="java的线程2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data4.Main1" />
+      <module name="java的线程2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XianCheng" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data.XianCheng" />
+      <module name="java的线程2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main1" />
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.XianCheng" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ed48cf2-9e9f-41b4-9be3-49330960e931" name="Default Changelist" comment="" />
+      <created>1614750439996</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614750439996</updated>
+      <workItem from="1614750442588" duration="11388000" />
+      <workItem from="1614821886839" duration="1600000" />
+      <workItem from="1614910636185" duration="23000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="413" y="88" key="#Custom_Plugin_Repositories" timestamp="1614753144858">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="413" y="88" key="#Custom_Plugin_Repositories/0.0.1536.824@0.0.1536.824" timestamp="1614753144858" />
+    <state x="361" y="70" key="#HTTP_Proxy" timestamp="1614753162158">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="70" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1614753162158" />
+    <state x="558" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1614822501716">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="558" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1614822501716" />
+    <state width="1234" height="151" key="GridCell.Tab.0.bottom" timestamp="1614822793906">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1234" height="151" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614822793906" />
+    <state width="1234" height="151" key="GridCell.Tab.0.center" timestamp="1614822793906">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1234" height="151" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614822793906" />
+    <state width="1234" height="151" key="GridCell.Tab.0.left" timestamp="1614822793906">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1234" height="151" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614822793906" />
+    <state width="1234" height="151" key="GridCell.Tab.0.right" timestamp="1614822793906">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1234" height="151" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614822793906" />
+    <state x="270" y="54" key="SettingsEditor" timestamp="1614753359038">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1614753359038" />
+    <state x="432" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1614910636149">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="432" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1614910636149" />
+    <state x="161" y="43" key="new project wizard" timestamp="1614910655807">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="161" y="43" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1614910655807" />
+    <state x="1038" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1614761899743">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="1038" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1614761899743" />
+  </component>
+</project>

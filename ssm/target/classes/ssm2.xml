@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd
+        http://www.springframework.org/schema/tx
+         http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+<!--    <context:property-placeholder location="classpath:jdbc.properties" />-->
+
+
+<!--    <bean id="datasource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">-->
+<!--        <property name="driverClass" value="${driver}" />-->
+<!--        <property name="jdbcUrl" value="${url}" />-->
+<!--        <property name="user" value="${username}" />-->
+<!--        <property name="password" value="${password}" />-->
+<!--&lt;!&ndash;        &lt;!&ndash; 当连接池中的连接耗尽的时候c3p0一次同时获取的连接数 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="acquireIncrement" value="${pool.increment}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash; 初始连接池大小 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="initialPoolSize" value="${pool.init}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash; 连接池中连接最小个数 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="minPoolSize" value="${pool.min}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash; 连接池中连接最大个数 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="maxPoolSize" value="${pool.max}"/>&ndash;&gt;-->
+<!--    </bean>-->
+
+
+
+<!--    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+<!--        <property name="dataSource" ref="datasource"/>-->
+<!--        &lt;!&ndash;    指定*Mapper.xml位置&ndash;&gt;-->
+<!--        <property name="mapperLocations" value="classpath:mapper/*.xml" />-->
+<!--    </bean>-->
+
+
+<!--    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" >-->
+<!--        &lt;!&ndash;    指定的是接口（Java）路径&ndash;&gt;-->
+<!--        <property name="basePackage" value="mapper" />-->
+<!--        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />-->
+<!--    </bean>-->
+
+
+    <!-- 声明式事务管理 : 定义事物管理器，由spring管理事务 -->
+<!--    <tx:annotation-driven/>-->
+
+<!--    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
+<!--        <property name="dataSource" ref="datasource"/>-->
+<!--    </bean>-->
+
+
+
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:jdbc.properties"/>
+    </bean>
+
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!-- 基本信息 -->
+        <property name="jdbcUrl" value="${url}"></property>
+        <property name="driverClass" value="${driver}"></property>
+        <property name="user" value="${username}"></property>
+        <property name="password" value="${password}"></property>
+    </bean>
+
+    <bean id="sessionFactory"
+          class="org.mybatis.spring.SqlSessionFactoryBean"
+          p:dataSource-ref="dataSource"
+
+    />
+    <!--          p:mapperLocations="classpath:mapper/m*.xml"-->
+    <!-- 到接口所在位置自动进行扫描，自动创建实现类,并且自动注册到spring容器当中去，名字不详 -->
+    <bean id="mybatisScanner"
+          class="org.mybatis.spring.mapper.MapperScannerConfigurer"
+          p:sqlSessionFactoryBeanName="sessionFactory"
+          p:basePackage="mapper"/>
+
+</beans>
